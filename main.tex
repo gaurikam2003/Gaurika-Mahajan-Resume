@@ -1,0 +1,315 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+\usepackage{xcolor, soul}
+\definecolor{lightGreen}{rgb}{0.83,0.94,0.88}
+\sethlcolor{lightGreen}
+\usepackage{graphicx}
+
+\usepackage{fontawesome}
+\usepackage[a4paper, left=0.2in, right=0.2in, top=0.25in, bottom=0.25in]{geometry}
+
+
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+ \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{-0.5in}
+% \addtolength{\evensidemargin}{-0.5in}
+% \addtolength{\textwidth}{1in}
+% \addtolength{\topmargin}{-.5in}
+% \addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.95\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \ifx&#3&%
+        % #1 is empty
+      \else
+        \textit{\small#3} & \textit{\small #4}
+       \fi
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubheadingpoo}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[4]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small#2 \\
+      % \small & \small#3 \\
+      \ifx&#3&%
+        % #3 is empty
+      \else
+        \textit{\small#3} & \textit{\small#4} \\
+       \fi
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-10pt}}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+
+    {\textbf{\Huge \scshape {Gaurika Mahajan}} } \\   
+    \vspace{5pt}
+    \faPhone \space \small 437-988-6918 \faEnvelope \space \href{mailto:gaurika.mahajan@mail.utoronto.ca}{gaurika.mahajan@mail.utoronto.ca}  
+    \href{https://www.linkedin.com/in/gaurika-mahajan/}{\faLinkedin \space gaurika-mahajan} 
+    \href{https://github.com/gaurikam2003} {\faGithub \space gaurikam2003} \\
+    % \small \faHome \space Toronto, ON
+    % \small \faHome \space Naperville, IL $|$ US Status: Green Card 
+    \small \faHome \space Chicago, IL $|$ US Status: US Green Card
+    %\small US Status: Green Card Holder based in Naperville
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Toronto (UofT) + PEY Co-op}{Toronto, ON}
+      {BASc in Computer Engineering, Minor in Artificial Intelligence}{Sept 2022 -- May 2026}
+      
+     \vspace{2pt} % Control the space between education details and relevant courses
+    \noindent\textit{\small Relevant Courses: Computer Networks, Data Structures and Algorithms, Databases, Operating Systems, Deep Learning}
+    \resumeSubheading
+    {\href {https://cp.certmetrics.com/amazon/en/public/verify/credential/2GPMY5GDQNVQ1FGX}{\small AWS Certified Cloud Practitioner \faLink}}{Jan 2024}
+      {}{}
+  \resumeSubHeadingListEnd
+%merge certifications and education 
+%can add courses under education, focus on courses that complement the position i am applying for 
+%-------CERTIFICATIONS----------
+% \section{Certifications}
+% \resumeSubHeadingListStart
+%     \resumeSubheadingpoo
+%     {\href{https://cp.certmetrics.com/amazon/en/public/verify/credential/2GPMY5GDQNVQ1FGX}{\underline{{AWS Certified Cloud Practitioner}}}}{Jan 2024}{}{}
+% \resumeSubHeadingListEnd
+    
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C++, Javascript, Python, HTML, CSS, Java, PostgreSQL, TypeScript, C MATLAB} \\
+     \textbf{Tools \& Frameworks}{: React, MongoDB, .NET, Git, Express, Node.js, AWS (S3, EC2, Lambda, Redshift, DynamoDB)} \\
+     %\textbf{Developer Tools}{: Git/Github, Amazon Web Services} \\
+     \textbf{Hardware}{: Verilog, Arduino, Soldering, AutoCAD} \\     
+     \textbf{Other}{: Kubernetes, PowerBI, SmartSheet, Microsoft Office, Excel, SharePoint, Google Suite}
+    }}
+ \end{itemize}
+ \vspace{-20pt}
+
+\section{Work Experience}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+      {\textbf{Software Engineering Intern}}{May 2025 -- Present}{Zynga}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Built and deployed Jenkins pipelines with AWS role-based access control, reducing manual deployment time by 50\% and enabling secure, automated delivery for multiple services}
+        \resumeItem{ Designed and optimized Splunk XML dashboards and alert filters, cutting average log triage and root-cause analysis time by 70\% through more targeted and dynamic queries}
+        \resumeItem{Investigated and debugged Docker-based RPM package deployments across services, improving cross-service traceability and cutting build troubleshooting time by 40\%}
+      \resumeItemListEnd
+        \resumeProjectHeading
+        {\textbf{Full Stack Web Developer}}{May 2024 -- Aug 2024}{{UofT Engineering Orientation Website}}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Followed an \textbf{SDLC} approach to manage and redevelop a \textbf{React/Redux} website for \textbf{1,000+ engineering students}}
+        \resumeItem{Implemented \textbf{Redis} to handle background subscriptions without impacting other functions, enhancing scalability \textbf{by 20\%}}
+        \resumeItem{Integrated payment via \textbf{Stripe API} and webhooks to process \textbf{\$150,000+} in transactions}
+        \resumeItem{Created MongoDB schemas for user information; implemented indexing to \textbf{improve query performance by 40\%}} 
+        \resumeItem{Built \textbf{Express} \textbf{REST API} to handle requests, including real-time leaderboard statistics and visualizations}
+        % \resumeItem{Ensured cross-platform compatibility through rigorous browser testing and debugging processes to resolve issues}
+        \resumeItem{\textbf{Used:} React, Redux, Redis, Docker, DigitalOcean, Nginx, AWS SES, MongoDB, MVC, CI/CD, Selenium}
+      \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{Compliance Intern}}{May 2024 -- Aug 2024}{Fresenius Kabi USA}{Chicago, IL}
+      \resumeItemListStart
+        \resumeItem{Designed monorepo architecture to consolidate data across 7 repositories into a single pipelined workflow, \textbf{improving data retrieval speed by 95\%}; automated alerts for call-to-action (CTA) responses, enhancing operational stability}
+        % \resumeItem{Integrated data sources into SmartSheet database to track quality agreements, improving data quality \& reliability \textbf{by 20\%}}
+        \resumeItem{Developed data visualization pipeline, in \textbf{SmartSheet \& SharePoint}, used in quarterly reports that speeds up deadline tracking, trend identification, and vendor/product reporting, \textbf{by 80\%}}         
+        \resumeItem{Analyzed \textbf{unstructured data} (100k+ datapoints across 12 years) to create database schema, track quality agreements, and extract insights that improved product launch forecasting \textbf{from 2 days to seconds}}
+      \resumeItemListEnd
+      \resumeSubHeadingListEnd
+  
+  \section{Extracurriculars}
+  \resumeSubHeadingListStart
+  \resumeProjectHeading
+        {\textbf{Software Developer}}{April 2024 -- Present}{UofT You're Next Career Network}{}
+      \resumeItemListStart
+          \resumeItem{Built a web application with \textbf{React} and \textbf{Firebase} to manage event sign-ups, used by \textbf{3,500+ students}}
+          \resumeItem{Developed a \textbf{Levenshtein} search and filter system to streamline sign-ins and navigation for career fairs, for \textbf{5,000+ users}}
+          % \resumeItem{Automated internal processes to enhance efficiency for handling interactions with \textbf{100+ companies}}
+          \resumeItem{Designed a user-centric interface (UI) in \textbf{Figma} to improve platform navigation and enhance student and company interactions}
+      \resumeItemListEnd
+
+      
+
+%-----------EXPERIENCE-----------  
+    
+    % \resumeProjectHeading
+    %     {\textbf{Class Representative} $|$ UofT Electrical and Computer Engineering}{Sept 2023 -- Present}{}{}
+    %     \resumeItemListStart
+    %       \resumeItem{Employed communication skills to address concerns, ensuring a supportive learning environment}
+    %       \resumeItem{Collaborated with faculty members in discussions at Faculty Council meetings, providing insights on policy matters}
+    %       \resumeItem{Promoted transparent communication by spreading important announcements, ensuring that all students were aware of accommodations and updates}
+    %       \resumeItemListEnd
+    \resumeProjectHeading
+        {\textbf{Web Development Director}}{Aug 2023 -- Aug 2024}{UofT Women in Science \& Engineering}{}
+        \resumeItemListStart
+          \resumeItem{Maintained and enhanced the WISE website to keep it updated, utilizing HTML, CSS, and JavaScript}
+          \resumeItem{Improved the email server, ensuring efficient communication and email security \textbf{by 95\%}}
+          \resumeItem{Automated email forwarding and filtering using \textbf{Gmail}, improving communication efficiency and response times}
+          % \resumeItem{Automated email forwarding to team leads, improving response times through email filtering and routing solutions}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+\section{Projects}
+  \resumeSubHeadingListStart
+  \resumeProjectHeading
+      {\textbf{Skin Cancer Classifer} $|$ {Python, PyTorch, TensorFlow, Google Colab, GitHub}}{}{}{}
+      \resumeItemListStart
+        \resumeItem{Developed a AI-driven CNN-based skin cancer classifier, achieving \textbf{80\% test accuracy} on dermatoscopic images}
+        \resumeItem{Integrated unsupervised learning techniques for data augmentation and feature extraction to enhance training data quality}
+        \resumeItem{Led data collection, model creation, training, and hyperparameter optimization for improved classification performance}
+        \resumeItem{Produced detailed reports showcasing the model’s architecture, performance metrics, \& actionable insights}
+      \resumeItemListEnd
+  \resumeProjectHeading
+        {\textbf{GIS Mapping Software} $|$ {C++, Git, Valgrind}}{}{}{}
+      \resumeItemListStart
+        \resumeItem{Built and optimized a GIS application in a team of 3 using an \textbf{Agile-inspired approach} and \textbf{OpenStreetMap API}}
+        \resumeItem{Implemented \textbf{A* and Dijkstra algorithms} for efficient pathfinding, leveraging \textbf{multi-threading} to cut latency by \textbf{200\%}}
+      \resumeItemListEnd 
+      \resumeProjectHeading
+      {\textbf{FPGA Game Development} $|$ {Assembly C}}{}{}{}
+    \resumeItemListStart
+      \resumeItem{Coded a game in \textbf{Assembly C} for an \textbf{FPGA} with visual output on a monitor, audio output, and keyboard input}
+      \resumeItem{Designed smooth character movement and obstacle avoidance mechanics using \textbf{double buffering} and keyboard arrows}
+      \resumeItem{Optimized \textbf{real-time performance} to handle visual rendering and audio synchronization for an engaging player experience}
+    \resumeItemListEnd
+    
+    
+
+    % \resumeProjectHeading
+    %   {\textbf{{Flappy Bird}} $|$ Verilog}{}{}{}
+    %   \resumeItemListStart
+    %   \resumeItem{Coded a game in \textbf{Verilog} for an \textbf{FPGA} with visual output on a monitor, audio output, and keyboard input}
+    %   \resumeItem{Designed smooth character movement and obstacle avoidance mechanics using \textbf{double buffering} and keyboard arrows}
+    %   \resumeItem{Optimized real-time performance to handle visual rendering and audio synchronization for an engaging player experience}
+    % \resumeItemListEnd
+
+       % \resumeProjectHeading
+      % {\textbf{\href{https://github.com/gaurikam2003/MorsePad}{Morse Pad \faLink}} $|$ Arduino}{}{}{}
+      % \resumeItemListStart
+      %   \resumeItem{Designed a device to process \textbf{keypad input}, displaying values on an \textbf{LCD RGB screen} and in Morse code via an LED}
+      %   \resumeItem{Refactored code via modular implementations, improving reusability, maintainability, scalability}
+      %   \resumeItem{Utilized \textbf{Arduino} to implement multiple peripherals given user input within a 24 hour time-frame}
+      %  \resumeItemListEnd
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+    % \resumeProjectHeading
+    %   {\textbf{\href{https://github.com/gaurikam2003/Weather-App}{Weather App \faLink}} $|$ HTML, CSS, JavaScript}{}{}{}
+    %   \resumeItemListStart
+    %     \resumeItem{Developed a web app to show current weather for a user-provided location and display relevant background images}
+    %     \resumeItem{Created a responsive landing page with \textbf{HTML, CSS,} and \textbf{Javascript} leading to a \textbf{20\% reduction} in bounce rates}
+    %     \resumeItem{Implemented \textbf{OpenWeatherMap API} to fetch real-time weather information}
+    %     \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
