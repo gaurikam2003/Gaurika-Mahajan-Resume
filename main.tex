@@ -24,7 +24,7 @@
 \sethlcolor{lightGreen}
 \usepackage{graphicx}
 
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \usepackage[a4paper, left=0.2in, right=0.2in, top=0.25in, bottom=0.25in]{geometry}
 
 
@@ -139,14 +139,14 @@
 
 \begin{center}
 
-    {\textbf{\Huge \scshape {Gaurika Mahajan}} } \\   
+    {\textbf{\Huge {Gaurika Mahajan}} } \\   
     \vspace{5pt}
     \faPhone \space \small 437-988-6918 \faEnvelope \space \href{mailto:gaurika.mahajan@mail.utoronto.ca}{gaurika.mahajan@mail.utoronto.ca}  
     \href{https://www.linkedin.com/in/gaurika-mahajan/}{\faLinkedin \space gaurika-mahajan} 
-    \href{https://github.com/gaurikam2003} {\faGithub \space gaurikam2003} \\
+    \href{https://github.com/gaurikam2003} {\faGithub \space gaurikam2003} 
     % \small \faHome \space Toronto, ON
     % \small \faHome \space Naperville, IL $|$ US Status: Green Card 
-    \small \faHome \space Chicago, IL $|$ US Status: US Green Card
+    \small \faHome \space Chicago, IL \faIdCard \space US Green Card
     %\small US Status: Green Card Holder based in Naperville
 \end{center}
 
@@ -155,8 +155,8 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of Toronto (UofT) + PEY Co-op}{Toronto, ON}
-      {BASc in Computer Engineering, Minor in Artificial Intelligence}{Sept 2022 -- May 2026}
+      {University of Toronto + PEY Co-op}{Toronto, ON}
+      {BASc in Computer Engineering, Minor in Artificial Intelligence}{Sept 2022 -- May 2027}
       
      \vspace{2pt} % Control the space between education details and relevant courses
     \noindent\textit{\small Relevant Courses: Computer Networks, Data Structures and Algorithms, Databases, Operating Systems, Deep Learning}
@@ -178,11 +178,11 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: C++, Javascript, Python, HTML, CSS, Java, PostgreSQL, TypeScript, C MATLAB} \\
-     \textbf{Tools \& Frameworks}{: React, MongoDB, .NET, Git, Express, Node.js, AWS (S3, EC2, Lambda, Redshift, DynamoDB)} \\
+     \textbf{Languages}{: Java, Python, Go, C++, Javascript, HTML, CSS, C, MATLAB} \\
+     \textbf{Tools \& Frameworks}{: React, MongoDB, PostgreSQL, Git, Express, Node.js, AWS (S3, EC2, Lambda, Redshift, DynamoDB)} \\
      %\textbf{Developer Tools}{: Git/Github, Amazon Web Services} \\
      \textbf{Hardware}{: Verilog, Arduino, Soldering, AutoCAD} \\     
-     \textbf{Other}{: Kubernetes, PowerBI, SmartSheet, Microsoft Office, Excel, SharePoint, Google Suite}
+     \textbf{Other}{: Jenkins, Docker, Kubernetes, Splunk, Datadog, SonarQube, SmartSheet, SharePoint}
     }}
  \end{itemize}
  \vspace{-20pt}
@@ -192,10 +192,19 @@
       \resumeProjectHeading
       {\textbf{Software Engineering Intern}}{May 2025 -- Present}{Zynga}{Toronto, ON}
       \resumeItemListStart
-        \resumeItem{Built and deployed Jenkins pipelines with AWS role-based access control, reducing manual deployment time by 50\% and enabling secure, automated delivery for multiple services}
-        \resumeItem{ Designed and optimized Splunk XML dashboards and alert filters, cutting average log triage and root-cause analysis time by 70\% through more targeted and dynamic queries}
-        \resumeItem{Investigated and debugged Docker-based RPM package deployments across services, improving cross-service traceability and cutting build troubleshooting time by 40\%}
+        % \resumeItem{Engineered automated deployment workflows for AWS Lambda services via Terraform and Jenkins, accelerating release cycles by 50\% and eliminating manual deployment bottlenecks}
+        \resumeItem{Spearheaded modernization of AWS Lambda infrastructure by upgrading runtimes and re-architecting Terraform modules, boosting system scalability and cutting developer maintenance effort by 40\%, while future-proofing cloud services}
+        \resumeItem{Automated infrastructure workflows by migrating legacy Terraform configurations and integrating Jenkins pipelines, reducing deployment time by 60\% and enabling error-free provisioning across environments}
+        \resumeItem{Improved system reliability by integrating Splunk and SonarQube to enable real-time log analysis and automate code quality reporting, reducing issue triage time by 70\% and increasing unit test coverage}
       \resumeItemListEnd
+
+      % \resumeProjectHeading
+      % {\textbf{Software Engineering Intern}}{May 2025 -- Present}{Zynga}{Toronto, ON}
+      % \resumeItemListStart
+      %   \resumeItem{Built and deployed Jenkins pipelines with AWS role-based access control, reducing manual deployment time by 50\% and enabling secure, automated delivery for multiple services}
+      %   \resumeItem{ Designed and optimized Splunk XML dashboards and alert filters, cutting average log triage and root-cause analysis time by 70\% through more targeted and dynamic queries}
+      %   \resumeItem{Investigated and debugged Docker-based RPM package deployments across services, improving cross-service traceability and cutting build troubleshooting time by 40\%}
+      % \resumeItemListEnd
         \resumeProjectHeading
         {\textbf{Full Stack Web Developer}}{May 2024 -- Aug 2024}{{UofT Engineering Orientation Website}}{Toronto, ON}
       \resumeItemListStart
@@ -220,7 +229,7 @@
   \section{Extracurriculars}
   \resumeSubHeadingListStart
   \resumeProjectHeading
-        {\textbf{Software Developer}}{April 2024 -- Present}{UofT You're Next Career Network}{}
+        {\textbf{Software Developer Director}}{April 2024 -- Present}{UofT You're Next Career Network}{}
       \resumeItemListStart
           \resumeItem{Built a web application with \textbf{React} and \textbf{Firebase} to manage event sign-ups, used by \textbf{3,500+ students}}
           \resumeItem{Developed a \textbf{Levenshtein} search and filter system to streamline sign-ins and navigation for career fairs, for \textbf{5,000+ users}}
@@ -239,14 +248,14 @@
     %       \resumeItem{Collaborated with faculty members in discussions at Faculty Council meetings, providing insights on policy matters}
     %       \resumeItem{Promoted transparent communication by spreading important announcements, ensuring that all students were aware of accommodations and updates}
     %       \resumeItemListEnd
-    \resumeProjectHeading
-        {\textbf{Web Development Director}}{Aug 2023 -- Aug 2024}{UofT Women in Science \& Engineering}{}
-        \resumeItemListStart
-          \resumeItem{Maintained and enhanced the WISE website to keep it updated, utilizing HTML, CSS, and JavaScript}
-          \resumeItem{Improved the email server, ensuring efficient communication and email security \textbf{by 95\%}}
-          \resumeItem{Automated email forwarding and filtering using \textbf{Gmail}, improving communication efficiency and response times}
-          % \resumeItem{Automated email forwarding to team leads, improving response times through email filtering and routing solutions}
-        \resumeItemListEnd
+    % \resumeProjectHeading
+    %     {\textbf{Web Development Director}}{Aug 2023 -- Aug 2024}{UofT Women in Science \& Engineering}{}
+    %     \resumeItemListStart
+    %       \resumeItem{Maintained and enhanced the WISE website to keep it updated, utilizing HTML, CSS, and JavaScript}
+    %       \resumeItem{Improved the email server, ensuring efficient communication and email security \textbf{by 95\%}}
+    %       \resumeItem{Automated email forwarding and filtering using \textbf{Gmail}, improving communication efficiency and response times}
+    %       % \resumeItem{Automated email forwarding to team leads, improving response times through email filtering and routing solutions}
+    %     \resumeItemListEnd
   \resumeSubHeadingListEnd
 %-----------PROJECTS-----------
 \section{Projects}
@@ -265,13 +274,13 @@
         \resumeItem{Built and optimized a GIS application in a team of 3 using an \textbf{Agile-inspired approach} and \textbf{OpenStreetMap API}}
         \resumeItem{Implemented \textbf{A* and Dijkstra algorithms} for efficient pathfinding, leveraging \textbf{multi-threading} to cut latency by \textbf{200\%}}
       \resumeItemListEnd 
-      \resumeProjectHeading
-      {\textbf{FPGA Game Development} $|$ {Assembly C}}{}{}{}
-    \resumeItemListStart
-      \resumeItem{Coded a game in \textbf{Assembly C} for an \textbf{FPGA} with visual output on a monitor, audio output, and keyboard input}
-      \resumeItem{Designed smooth character movement and obstacle avoidance mechanics using \textbf{double buffering} and keyboard arrows}
-      \resumeItem{Optimized \textbf{real-time performance} to handle visual rendering and audio synchronization for an engaging player experience}
-    \resumeItemListEnd
+    %   \resumeProjectHeading
+    %   {\textbf{FPGA Game Development} $|$ {Assembly C}}{}{}{}
+    % \resumeItemListStart
+    %   \resumeItem{Coded a game in \textbf{Assembly C} for an \textbf{FPGA} with visual output on a monitor, audio output, and keyboard input}
+    %   \resumeItem{Designed smooth character movement and obstacle avoidance mechanics using \textbf{double buffering} and keyboard arrows}
+    %   \resumeItem{Optimized \textbf{real-time performance} to handle visual rendering and audio synchronization for an engaging player experience}
+    % \resumeItemListEnd
     
     
 
