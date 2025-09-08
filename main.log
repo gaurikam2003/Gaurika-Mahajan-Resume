@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.3)  17 AUG 2025 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.3)  8 SEP 2025 00:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -381,14 +381,14 @@ Package hyperref Info: Link coloring OFF on input line 132.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(14.45377pt, 568.60034pt, 14.45377pt)
+* h-part:(L,W,R)=(18.06749pt, 561.3729pt, 18.06749pt)
 * v-part:(T,H,B)=(18.06749pt, 808.91187pt, 18.06749pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=568.60034pt
+* \textwidth=561.3729pt
 * \textheight=808.91187pt
-* \oddsidemargin=-57.81622pt
-* \evensidemargin=-57.81622pt
+* \oddsidemargin=-54.2025pt
+* \evensidemargin=-54.2025pt
 * \topmargin=-54.2025pt
 * \headheight=0.0pt
 * \headsep=0.0pt
@@ -426,10 +426,10 @@ LaTeX Font Info:    Trying to load font information for U+lasy on input line 159
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 196.
+(Font)              <5> on input line 197.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 197.
-LaTeX Font Info:    Trying to load font information for TS1+bch on input line 213.
+(Font)              <7> on input line 198.
+LaTeX Font Info:    Trying to load font information for TS1+bch on input line 214.
  (C:\Users\gauri\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1bch.fd
 File: ts1bch.fd 2004/10/18 font definitions for TS1/bch.
 )
@@ -447,20 +447,20 @@ LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 9943361F7D1162AFA9F770D8F8732390;541.
+(rerunfilecheck)             Checksum: DB82A90C7E62C40956E7029ED1D66C74;511.
  ) 
 Here is how much of TeX's memory you used:
- 15502 strings out of 473682
- 267623 string characters out of 5719216
- 692826 words of memory out of 5000000
- 38357 multiletter control sequences out of 15000+600000
- 579591 words of font info for 75 fonts, out of 8000000 for 9000
+ 15501 strings out of 473682
+ 267594 string characters out of 5719216
+ 691825 words of memory out of 5000000
+ 38356 multiletter control sequences out of 15000+600000
+ 579280 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,423b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,425b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on main.pdf (1 page, 127749 bytes).
+Output written on main.pdf (1 page, 123951 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  7 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

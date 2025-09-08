@@ -25,7 +25,7 @@
 \usepackage{graphicx}
 
 \usepackage{fontawesome5}
-\usepackage[a4paper, left=0.2in, right=0.2in, top=0.25in, bottom=0.25in]{geometry}
+\usepackage[a4paper, left=0.25in, right=0.25in, top=0.25in, bottom=0.25in]{geometry}
 
 
 
@@ -83,7 +83,7 @@
       \ifx&#3&%
         % #1 is empty
       \else
-        \textit{\small#3} & \textit{\small #4}
+        {\small#3} & \textit{\small #4}
        \fi
     \end{tabular*}\vspace{-7pt}
 }
@@ -98,7 +98,7 @@
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      {\small#1} & \textit{\small #2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -110,7 +110,7 @@
       \ifx&#3&%
         % #3 is empty
       \else
-        \textit{\small#3} & \textit{\small#4} \\
+        {\small#3} & {\small#4} \\
        \fi
     \end{tabular*}\vspace{-7pt}
 }
@@ -160,9 +160,9 @@
       
      \vspace{2pt} % Control the space between education details and relevant courses
     \noindent\textit{\small Relevant Courses: Computer Networks, Data Structures and Algorithms, Databases, Operating Systems, Deep Learning}
-    \resumeSubheading
-    {\href {https://cp.certmetrics.com/amazon/en/public/verify/credential/2GPMY5GDQNVQ1FGX}{\small AWS Certified Cloud Practitioner \faLink}}{Jan 2024}
-      {}{}
+    % \resumeSubheading
+    % {\href {https://cp.certmetrics.com/amazon/en/public/verify/credential/2GPMY5GDQNVQ1FGX}{\small AWS Certified Cloud Practitioner \faLink}}{Jan 2024}
+      % {}{}
   \resumeSubHeadingListEnd
 %merge certifications and education 
 %can add courses under education, focus on courses that complement the position i am applying for 
@@ -179,10 +179,11 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Java, Python, Go, C++, Javascript, HTML, CSS, C, MATLAB} \\
-     \textbf{Tools \& Frameworks}{: React, MongoDB, PostgreSQL, Git, Express, Node.js, AWS (S3, EC2, Lambda, Redshift, DynamoDB)} \\
+     \textbf{Tools}{: Got, Jenkins, Docker, Kubernetes, MongoDB, PostgreSQL, Splunk, Datadog, SonarQube} \\
+     \textbf{Frameworks}{: React, Express, Node.js} \\
      %\textbf{Developer Tools}{: Git/Github, Amazon Web Services} \\
-     \textbf{Hardware}{: Verilog, Arduino, Soldering, AutoCAD} \\     
-     \textbf{Other}{: Jenkins, Docker, Kubernetes, Splunk, Datadog, SonarQube, SmartSheet, SharePoint}
+    %  \textbf{Hardware}{: Verilog, Arduino, Soldering, AutoCAD} \\     
+     \textbf{Cloud}{: AWS (S3, EC2, Lambda, Redshift, DynamoDB)}
     }}
  \end{itemize}
  \vspace{-20pt}
@@ -193,9 +194,9 @@
       {\textbf{Software Engineering Intern}}{May 2025 -- Present}{Zynga}{Toronto, ON}
       \resumeItemListStart
         % \resumeItem{Engineered automated deployment workflows for AWS Lambda services via Terraform and Jenkins, accelerating release cycles by 50\% and eliminating manual deployment bottlenecks}
-        \resumeItem{Spearheaded modernization of AWS Lambda infrastructure by upgrading runtimes and re-architecting Terraform modules, boosting system scalability and cutting developer maintenance effort by 40\%, while future-proofing cloud services}
-        \resumeItem{Automated infrastructure workflows by migrating legacy Terraform configurations and integrating Jenkins pipelines, reducing deployment time by 60\% and enabling error-free provisioning across environments}
-        \resumeItem{Improved system reliability by integrating Splunk and SonarQube to enable real-time log analysis and automate code quality reporting, reducing issue triage time by 70\% and increasing unit test coverage}
+        \resumeItem{Migrated critical heartbeat API from legacy PHP endpoints to modern event-driven architecture, improving system reliability \textbf{by 40\%} and reducing API response latency while maintaining backward compatibility for \textbf{10+ game titles}}
+        \resumeItem{Built centralized CI/CD infrastructure by integrating SonarQube across \textbf{8 repositories} and creating reusable Docker images deployed on EKS, reducing code duplication \textbf{by 65\%} and standardizing deployment pipelines for backend services}
+        \resumeItem{Led cross-team system migration to replace legacy RPM distribution infrastructure with DNF-based solution, eliminating single point of failure and improving package deployment success rate from \textbf{70\% to 98\%}}
       \resumeItemListEnd
 
       % \resumeProjectHeading
@@ -208,39 +209,34 @@
         \resumeProjectHeading
         {\textbf{Full Stack Web Developer}}{May 2024 -- Aug 2024}{{UofT Engineering Orientation Website}}{Toronto, ON}
       \resumeItemListStart
-        \resumeItem{Followed an \textbf{SDLC} approach to manage and redevelop a \textbf{React/Redux} website for \textbf{1,000+ engineering students}}
-        \resumeItem{Implemented \textbf{Redis} to handle background subscriptions without impacting other functions, enhancing scalability \textbf{by 20\%}}
-        \resumeItem{Integrated payment via \textbf{Stripe API} and webhooks to process \textbf{\$150,000+} in transactions}
-        \resumeItem{Created MongoDB schemas for user information; implemented indexing to \textbf{improve query performance by 40\%}} 
-        \resumeItem{Built \textbf{Express} \textbf{REST API} to handle requests, including real-time leaderboard statistics and visualizations}
-        % \resumeItem{Ensured cross-platform compatibility through rigorous browser testing and debugging processes to resolve issues}
-        \resumeItem{\textbf{Used:} React, Redux, Redis, Docker, DigitalOcean, Nginx, AWS SES, MongoDB, MVC, CI/CD, Selenium}
+        \resumeItem{Developed and launched \textbf{React/Redux} web application serving \textbf{1,000+ engineering students} using SDLC best practices, building \textbf{Express REST API} with real-time leaderboard functionality and data visualizations}
+        \resumeItem{Architected scalable backend infrastructure using MongoDB with optimized indexing \textbf{(40\% query performance improvement)} and \textbf{Redis} caching for background subscriptions, enhancing system scalability \textbf{by 20\%}}
+        \resumeItem{Integrated reliable payment flows via \textbf{Stripe API} and webhooks to process \textbf{\$150,000+} in transactions}
       \resumeItemListEnd
       \resumeProjectHeading
         {\textbf{Compliance Intern}}{May 2024 -- Aug 2024}{Fresenius Kabi USA}{Chicago, IL}
       \resumeItemListStart
         \resumeItem{Designed monorepo architecture to consolidate data across 7 repositories into a single pipelined workflow, \textbf{improving data retrieval speed by 95\%}; automated alerts for call-to-action (CTA) responses, enhancing operational stability}
         % \resumeItem{Integrated data sources into SmartSheet database to track quality agreements, improving data quality \& reliability \textbf{by 20\%}}
-        \resumeItem{Developed data visualization pipeline, in \textbf{SmartSheet \& SharePoint}, used in quarterly reports that speeds up deadline tracking, trend identification, and vendor/product reporting, \textbf{by 80\%}}         
+        \resumeItem{Developed data visualization pipeline, in \textbf{SmartSheet} and \textbf{SharePoint}, used in quarterly reports that speeds up deadline tracking, trend identification, and vendor/product reporting, \textbf{by 80\%}}         
         \resumeItem{Analyzed \textbf{unstructured data} (100k+ datapoints across 12 years) to create database schema, track quality agreements, and extract insights that improved product launch forecasting \textbf{from 2 days to seconds}}
       \resumeItemListEnd
       \resumeSubHeadingListEnd
   
-  \section{Extracurriculars}
+  \section{Leadership}
   \resumeSubHeadingListStart
   \resumeProjectHeading
         {\textbf{Software Developer Director}}{April 2024 -- Present}{UofT You're Next Career Network}{}
       \resumeItemListStart
-          \resumeItem{Built a web application with \textbf{React} and \textbf{Firebase} to manage event sign-ups, used by \textbf{3,500+ students}}
-          \resumeItem{Developed a \textbf{Levenshtein} search and filter system to streamline sign-ins and navigation for career fairs, for \textbf{5,000+ users}}
-          % \resumeItem{Automated internal processes to enhance efficiency for handling interactions with \textbf{100+ companies}}
-          \resumeItem{Designed a user-centric interface (UI) in \textbf{Figma} to improve platform navigation and enhance student and company interactions}
+          \resumeItem{Lead team of 10 developers in expanding \textbf{React/Firebase} platform serving 3,500+ students to manage event sign-ups}
+          \resumeItem{Defined product roadmap, created technical specs for feature development, and designed user-centric interface in Figma}
       \resumeItemListEnd
-
-      
-
-%-----------EXPERIENCE-----------  
-    
+      \resumeProjectHeading
+      {\textbf{Web Development Director}}{Aug 2023 -- Aug 2024}{UofT Women in Science \& Engineering}{}
+      \resumeItemListStart
+        \resumeItem{Led website development and infrastructure improvements, enhancing user experience for \textbf{500+ members}}
+        \resumeItem{Architected automated email management system using Gmail APIs, reducing manual administrative overhead \textbf{by 60\%}}
+      \resumeItemListEnd
     % \resumeProjectHeading
     %     {\textbf{Class Representative} $|$ UofT Electrical and Computer Engineering}{Sept 2023 -- Present}{}{}
     %     \resumeItemListStart
@@ -248,14 +244,6 @@
     %       \resumeItem{Collaborated with faculty members in discussions at Faculty Council meetings, providing insights on policy matters}
     %       \resumeItem{Promoted transparent communication by spreading important announcements, ensuring that all students were aware of accommodations and updates}
     %       \resumeItemListEnd
-    % \resumeProjectHeading
-    %     {\textbf{Web Development Director}}{Aug 2023 -- Aug 2024}{UofT Women in Science \& Engineering}{}
-    %     \resumeItemListStart
-    %       \resumeItem{Maintained and enhanced the WISE website to keep it updated, utilizing HTML, CSS, and JavaScript}
-    %       \resumeItem{Improved the email server, ensuring efficient communication and email security \textbf{by 95\%}}
-    %       \resumeItem{Automated email forwarding and filtering using \textbf{Gmail}, improving communication efficiency and response times}
-    %       % \resumeItem{Automated email forwarding to team leads, improving response times through email filtering and routing solutions}
-    %     \resumeItemListEnd
   \resumeSubHeadingListEnd
 %-----------PROJECTS-----------
 \section{Projects}
