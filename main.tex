@@ -76,17 +76,23 @@
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubheading}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.95\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \ifx&#3&%
-        % #1 is empty
+        % #3 is empty
       \else
-        {\small#3} & \textit{\small #4}
-       \fi
+        {\small #3} & \textit{\small #4} \\
+      \fi
+      \ifx&#5&%
+        % no relevant courses
+      \else
+        \multicolumn{2}{l}{\small \textit{Relevant Courses: #5}} \\
+      \fi
     \end{tabular*}\vspace{-7pt}
 }
+
 
 \newcommand{\resumeSubheadingpoo}[2]{
   \vspace{-2pt}\item
@@ -114,6 +120,7 @@
        \fi
     \end{tabular*}\vspace{-7pt}
 }
+
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
@@ -146,7 +153,8 @@
     \href{https://github.com/gaurikam2003} {\faGithub \space gaurikam2003} 
     % \small \faHome \space Toronto, ON
     % \small \faHome \space Naperville, IL $|$ US Status: Green Card 
-    \small \faHome \space Chicago, IL \faIdCard \space US Green Card
+    \small \faHome \space Chicago, IL 
+    % \faIdCard \space US Green Card
     %\small US Status: Green Card Holder based in Naperville
 \end{center}
 
@@ -156,10 +164,8 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Toronto + PEY Co-op}{Toronto, ON}
-      {BASc in Computer Engineering, Minor in Artificial Intelligence}{Sept 2022 -- May 2027}
-      
-     \vspace{2pt} % Control the space between education details and relevant courses
-    \noindent\textit{\small Relevant Courses: Computer Networks, Data Structures and Algorithms, Databases, Operating Systems, Deep Learning}
+      {BASc in Computer Engineering, Minor in Artificial Intelligence, ECE Class Representative}{Sept 2022 -- May 2027}
+      {Computer Networks, Data Structures and Algorithms, Databases, Operating Systems, Deep Learning, Computer Security, Intro to Databases}
     % \resumeSubheading
     % {\href {https://cp.certmetrics.com/amazon/en/public/verify/credential/2GPMY5GDQNVQ1FGX}{\small AWS Certified Cloud Practitioner \faLink}}{Jan 2024}
       % {}{}
@@ -178,12 +184,10 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, Go, C++, Javascript, HTML, CSS, C, MATLAB} \\
-     \textbf{Tools}{: Jenkins, Docker, Kubernetes, Splunk, Datadog, SonarQube, TensorFlow, PyTorch} \\
-     \textbf{Frameworks}{: React, Express, Node.js} \\
+     \textbf{Languages and Frameworks}{: Java, Python, Go, C++, Javascript, HTML, CSS, C, MATLAB, React, Express, Node.js} \\
+     \textbf{Tools}{: Jenkins, Docker, Kubernetes, Splunk, Datadog, SonarQube, TensorFlow, PyTorch, AWS (S3, EC2, Lambda, DynamoDB), MongoDB, PostgreSQL, Redis} \\
      %\textbf{Developer Tools}{: Git/Github, Amazon Web Services} \\
     %  \textbf{Hardware}{: Verilog, Arduino, Soldering, AutoCAD} \\     
-     \textbf{Databases/Cloud}{: AWS (S3, EC2, Lambda, Redshift, DynamoDB), MongoDB, PostgreSQL, Redis} \\
      \textbf{Dev Practices}{: Git, CI/CD, Testing, OOP, Design Patterns, Agile, UML, Linux/Unix, Windows}
     }}
  \end{itemize}
@@ -192,7 +196,7 @@
 \section{Work Experience}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-      {\textbf{Software Engineering Intern}}{May 2025 -- Present}{Zynga}{Toronto, ON}
+      {\textbf{Software Engineering Intern} $|$ Zynga}{May 2025 -- Present $|$ Toronto, ON}{}{}
       \resumeItemListStart
         % \resumeItem{Engineered automated deployment workflows for AWS Lambda services via Terraform and Jenkins, accelerating release cycles by 50\% and eliminating manual deployment bottlenecks}
         \resumeItem{Migrated critical heartbeat API from legacy PHP endpoints to modern event-driven architecture, improving system reliability \textbf{by 40\%} and reducing API response latency while maintaining backward compatibility for \textbf{10+ game titles}}
@@ -208,14 +212,14 @@
       %   \resumeItem{Investigated and debugged Docker-based RPM package deployments across services, improving cross-service traceability and cutting build troubleshooting time by 40\%}
       % \resumeItemListEnd
         \resumeProjectHeading
-        {\textbf{Full Stack Web Developer}}{May 2024 -- Aug 2024}{{UofT Engineering Orientation Website}}{Toronto, ON}
+        {\textbf{Full Stack Web Developer} $|$ UofT Engineering Orientation Website}{May 2024 -- Aug 2024 $|$ Toronto, ON}{}{}
       \resumeItemListStart
         \resumeItem{Developed and launched \textbf{React/Redux} web application serving \textbf{1,000+ engineering students} using SDLC best practices, building \textbf{Express REST API} with real-time leaderboard functionality and data visualizations}
         \resumeItem{Architected scalable backend infrastructure using MongoDB with optimized indexing \textbf{(40\% query performance improvement)} and \textbf{Redis} caching for background subscriptions, enhancing system scalability \textbf{by 20\%}}
         \resumeItem{Integrated reliable payment flows via \textbf{Stripe API} and webhooks to process \textbf{\$150,000+} in transactions}
       \resumeItemListEnd
       \resumeProjectHeading
-        {\textbf{Compliance Intern}}{May 2024 -- Aug 2024}{Fresenius Kabi USA}{Chicago, IL}
+        {\textbf{Compliance Intern} $|$ Fresenius Kabi USA}{May 2024 -- Aug 2024 $|$ Chicago, IL}{}{}
       \resumeItemListStart
         \resumeItem{Designed monorepo architecture to consolidate data across 7 repositories into a single pipelined workflow, \textbf{improving data retrieval speed by 95\%}; automated alerts for call-to-action (CTA) responses, enhancing operational stability}
         % \resumeItem{Integrated data sources into SmartSheet database to track quality agreements, improving data quality \& reliability \textbf{by 20\%}}
@@ -227,13 +231,13 @@
   \section{Leadership}
   \resumeSubHeadingListStart
   \resumeProjectHeading
-        {\textbf{Software Developer Director}}{April 2024 -- Present}{UofT You're Next Career Network}{}
+        {\textbf{Software Developer Director} $|$ UofT You're Next Career Network}{April 2024 -- Present}{}{}
       \resumeItemListStart
           \resumeItem{Lead team of 10 developers in expanding \textbf{React/Firebase} platform serving 3,500+ students to manage event sign-ups}
           \resumeItem{Defined product roadmap, created technical specs for feature development, and designed user-centric interface in Figma}
       \resumeItemListEnd
       \resumeProjectHeading
-      {\textbf{Web Development Director}}{Aug 2023 -- Aug 2024}{UofT Women in Science \& Engineering}{}
+      {\textbf{Web Development Director} $|$ UofT Women in Science \& Engineering}{Aug 2023 -- Aug 2024}{}{}
       \resumeItemListStart
         \resumeItem{Led website development and infrastructure improvements, enhancing user experience for \textbf{500+ members}}
         \resumeItem{Architected automated email management system using Gmail APIs, reducing manual administrative overhead \textbf{by 60\%}}
@@ -257,12 +261,20 @@
         \resumeItem{Led data collection, model creation, training, and hyperparameter optimization for improved classification performance}
         \resumeItem{Produced detailed reports showcasing the model’s architecture, performance metrics, \& actionable insights}
       \resumeItemListEnd
-  \resumeProjectHeading
-        {\textbf{GIS Mapping Software} $|$ {C++, Git, Valgrind}}{}{}{}
+      \resumeProjectHeading
+      {\textbf{Code Canvas} $|$ {Prompt Engineering}}{}{}{}
       \resumeItemListStart
-        \resumeItem{Built and optimized a GIS application in a team of 3 using an \textbf{Agile-inspired approach} and \textbf{OpenStreetMap API}}
-        \resumeItem{Implemented \textbf{A* and Dijkstra algorithms} for efficient pathfinding, leveraging \textbf{multi-threading} to cut latency by \textbf{200\%}}
-      \resumeItemListEnd 
+        \resumeItem{Built AI-powered architecture diagram generator using Claude Sonnet 4 and C4 modeling to automatically visualize system designs from GitHub repositories}
+        \resumeItem{Built architecture diagram generator using Claude Sonnet 4 and C4 modeling, reducing manual documentation time by 80\%}
+        \resumeItem{Developed containerized solution to analyze repositories and generate multi-level architecture diagrams in minutes}
+        \resumeItem{Delivered solution standardizing documentation across 15+ engineering teams to improve onboarding efficiency by 60\%}
+      \resumeItemListEnd
+    % \resumeProjectHeading
+    %       {\textbf{GIS Mapping Software} $|$ {C++, Git, Valgrind}}{}{}{}
+    %     \resumeItemListStart
+    %       \resumeItem{Built and optimized a GIS application in a team of 3 using an \textbf{Agile-inspired approach} and \textbf{OpenStreetMap API}}
+    %       \resumeItem{Implemented \textbf{A* and Dijkstra algorithms} for efficient pathfinding, leveraging \textbf{multi-threading} to cut latency by \textbf{200\%}}
+    %     \resumeItemListEnd 
     %   \resumeProjectHeading
     %   {\textbf{FPGA Game Development} $|$ {Assembly C}}{}{}{}
     % \resumeItemListStart
