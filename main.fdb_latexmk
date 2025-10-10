@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1759447627.05865 "c:/Users/gauri/OneDrive/Documents/Latex/Gaurika Mahajan Resume/main.tex" "main.pdf" "main" 1759447629.67504 0
+["pdflatex"] 1759948421.36629 "c:/Users/gauri/OneDrive/Documents/Latex/Gaurika Mahajan Resume/main.tex" "main.pdf" "main" 1759948423.69737 0
   "C:/Users/gauri/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1755453918 83973 1a9059377496baa80ec718340ea46b71 ""
   "C:/Users/gauri/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1733237536 11986913 6207becf7f936a10945026e22ad2b5e8 ""
   "C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -124,10 +124,10 @@
   "C:/Users/gauri/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty" 1730400552 7532 d2e1111e17bfebb1607d8ffa779705ec ""
   "C:/Users/gauri/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/gauri/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/gauri/OneDrive/Documents/Latex/Gaurika Mahajan Resume/main.tex" 1759447624 16600 73d4cbeb35ec793318de33d9f4274595 ""
-  "main.aux" 1759447629 823 19bccc81a9e5be2f6c09a69f29fe7adf "pdflatex"
-  "main.out" 1759447629 511 db82a90c7e62c40956e7029ed1d66c74 "pdflatex"
-  "main.tex" 1759447624 16600 73d4cbeb35ec793318de33d9f4274595 ""
+  "c:/Users/gauri/OneDrive/Documents/Latex/Gaurika Mahajan Resume/main.tex" 1759948418 16885 46abb49e8db009e6c60c09334000b72c ""
+  "main.aux" 1759948422 823 19bccc81a9e5be2f6c09a69f29fe7adf "pdflatex"
+  "main.out" 1759948422 511 db82a90c7e62c40956e7029ed1d66c74 "pdflatex"
+  "main.tex" 1759948418 16885 46abb49e8db009e6c60c09334000b72c ""
   (generated)
   "main.aux"
   "main.log"
