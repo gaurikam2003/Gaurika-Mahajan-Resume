@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.3)  8 OCT 2025 14:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.12.3)  10 OCT 2025 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -452,13 +452,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  15501 strings out of 473682
  267594 string characters out of 5719216
- 691830 words of memory out of 5000000
+ 693830 words of memory out of 5000000
  38356 multiletter control sequences out of 15000+600000
  579280 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,11n,79p,427b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gauri/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on main.pdf (1 page, 123838 bytes).
+Output written on main.pdf (1 page, 124491 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  7 named destinations out of 1000 (max. 500000)
