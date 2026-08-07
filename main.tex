@@ -18,13 +18,31 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\ifdefined\pdfgentounicode\input{glyphtounicode}\fi % pdfTeX-only; skipped under XeTeX/Tectonic
 \usepackage{xcolor, soul}
 \definecolor{lightGreen}{rgb}{0.83,0.94,0.88}
 \sethlcolor{lightGreen}
 \usepackage{graphicx}
 
-\usepackage{fontawesome5}
+% FontAwesome icons: load under pdfTeX (Overleaf/MiKTeX); under XeTeX/Tectonic
+% the FontAwesome font crashes the shaper, so fall back to plain-text labels.
+\ifdefined\pdfgentounicode
+  \usepackage{fontawesome5}
+\else
+  % XeTeX/Tectonic: the fontawesome5 package loads its font by name, which
+  % crashes the shaper on macOS. Load the vendored OTFs by explicit path
+  % (fonts/) instead and map the icons we use to their FontAwesome codepoints.
+  \usepackage{fontspec}
+  \newfontface\faSolidFont[Path=fonts/]{FontAwesome5Free-Solid-900.otf}
+  \newfontface\faBrandsFont[Path=fonts/]{FontAwesome5Brands-Regular-400.otf}
+  \newcommand{\faPhone}{{\faSolidFont\symbol{"F095}}}
+  \newcommand{\faEnvelope}{{\faSolidFont\symbol{"F0E0}}}
+  \newcommand{\faHome}{{\faSolidFont\symbol{"F015}}}
+  \newcommand{\faIdCard}{{\faSolidFont\symbol{"F2C2}}}
+  \newcommand{\faLink}{{\faSolidFont\symbol{"F0C1}}}
+  \newcommand{\faLinkedin}{{\faBrandsFont\symbol{"F08C}}}
+  \newcommand{\faGithub}{{\faBrandsFont\symbol{"F09B}}}
+\fi
 \usepackage[letterpaper, left=0.2in, right=0.2in, top=0.25in, bottom=0.25in]{geometry}
 
 
@@ -40,7 +58,21 @@
 
 % serif
 % \usepackage{CormorantGaramond}
- \usepackage{charter}
+% Charter font: the legacy `charter` package works under pdfTeX (Overleaf/MiKTeX)
+% but its font encoding is unsupported by XeTeX, where bold silently collapses to
+% regular. Under XeTeX/Tectonic, load the OpenType XCharter instead (same look).
+\ifdefined\pdfgentounicode
+  \usepackage{charter}
+\else
+  \usepackage{fontspec}
+  \setmainfont{XCharter}[
+    Extension=.otf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    BoldItalicFont=*-BoldItalic,
+  ]
+\fi
 
 
 \pagestyle{fancy}
@@ -66,7 +98,7 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+\ifdefined\pdfgentounicode\pdfgentounicode=1\fi % pdfTeX-only; skipped under XeTeX/Tectonic
 
 %-------------------------
 % Custom commands
@@ -144,7 +176,7 @@
 
     {\textbf{\Huge {Gaurika Mahajan}} } \\   
     \vspace{5pt}
-    \faPhone \space \small 437-988-6918 \faEnvelope \space \href{mailto:gaurika.mahajan@mail.utoronto.ca}{gaurika.mahajan@mail.utoronto.ca}  
+    \faPhone \space \small 437-988-6918 \faEnvelope \space \href{mailto:gaurikam2003@gmail.com}{gaurikam2003@gmail.com}  
     \href{https://www.linkedin.com/in/gaurika-mahajan/}{\faLinkedin \space gaurika-mahajan} 
     \href{https://github.com/gaurikam2003} {\faGithub \space gaurikam2003} 
     % \small \faHome \space Toronto, ON
@@ -158,9 +190,7 @@
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {University of Toronto}{Toronto, ON}
-      {BASc in Computer Engineering, Minor in Artificial Intelligence}{Sept 2022 -- May 2027}
+    \resumeProjectHeading{\textbf{University of Toronto}}{Toronto, ON $|$ Sept 2022 - May 2027}{BASc in Computer Engineering, Minor in Artificial Intelligence}{}
       
      \vspace{2pt} % Control the space between education details and relevant courses
     \noindent\textit{\small Relevant Courses: Data Structures and Algorithms, Operating Systems, Computer Networks, Databases, Computer Security, Deep Learning} 
@@ -182,9 +212,9 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages and Frameworks}{: Java, Python, Golang, C++, C, Javascript, React, Express, TypeScript, HTML, CSS, MATLAB} \\
-     \textbf{Tools}{: Jenkins, Docker, Kubernetes, Terraform, Apache Kafka, Splunk, Datadog, SonarQube, TensorFlow, PyTorch} \\
-     \textbf{Databases/Cloud}{: AWS (EKS, S3, EC2, Lambda, DynamoDB), MongoDB, PostgreSQL, Redis}
+     \textbf{Languages and Frameworks}{: Python, Golang, SQL, PySpark, Java, C++, C} \\
+     \textbf{Tools}{: Databricks, Apache Kafka, Airflow, Docker, Kubernetes, Terraform, Jenkins, Datadog, Splunk} \\
+     \textbf{Databases/Cloud}{: AWS (S3, EC2, EKS, Lambda, DynamoDB), Elasticsearch, PostgreSQL, MySQL, MongoDB, Redis}
      %\textbf{Developer Tools}{: Git/Github, Amazon Web Services} \\
     %  \textbf{Hardware}{: Verilog, Arduino, Soldering, AutoCAD} \\     
     %  \textbf{Dev Practices}{: Git, CI/CD, Testing, OOP, Design Patterns, Agile, UML, Linux/Unix, Windows}
@@ -194,16 +224,24 @@
 
 \section{Work Experience}
     \resumeSubHeadingListStart
+      \resumeProjectHeading{\textbf{Software Engineering Intern} $|$ Patreon}{New York, NY $|$ May 2026 - Aug 2026}{}{}
+        \resumeItemListStart
+          % \resumeItem{Shipped a diff-based framework for data-sync pipelines, replacing full-dataset reloads with changed-row updates, cutting redundant writes \textbf{by 90\%} and run time by \textbf{20\%} across \textbf{20 production pipelines}.}
+          \resumeItem{Architected a diff-based framework to update database rows upon change instead of full rewrites, reducing redundant writes by \textbf{80\%} and runtime by \textbf{20\%} across \textbf{20 production pipelines}.}
+          \resumeItem{Designed \textbf{Delta Lake} tables mirroring {Elasticsearch} indicies to pinpoint which rows change every run, at \textbf{300M+ row scale}.}
+          \resumeItem{Introduced a concurrency-safe write, adopted framework-wide,  eliminating \textbf{7+ weekly} race-condition failures.}
+          % \resumeItem{Automated reconciliation catching \textbf{67K+} dropped records and \textbf{GDPR}-compliant deletions, resulting in data integrity.}
+          \resumeItem{Built automated reconciliation between Databricks and Elasticsearch catching \textbf{67K+ missing records}, and added GDPR-compliant deletion, keeping user-facing data complete, accurate, and compliant.}
+          % \resumeItem{Ran framework in parallel with production, verifying correctness against live data for zero-downtime rollout across all Airflow pipelines.}
+        \resumeItemListEnd
       \resumeProjectHeading
-      {\textbf{Software Engineering Intern} $|$ Zynga}{Toronto, ON $|$ May 2025 -- Present}{}{}
+      {\textbf{Software Engineering Intern} $|$ Zynga}{Toronto, ON $|$ May 2025 -- April 2026}{}{}
       \resumeItemListStart
-        % \resumeItem{Engineered automated deployment workflows for AWS Lambda services via Terraform and Jenkins, accelerating release cycles by 50\% and eliminating manual deployment bottlenecks}
-        \resumeItem{Migrated critical heartbeat API from legacy PHP endpoints to modern event-driven architecture, improving system reliability \textbf{by 40\%} and reducing API response latency while maintaining backward compatibility for \textbf{10+ game titles}.}
-        \resumeItem{Built centralized \textbf{CI/CD infrastructure} integrating SonarQube across \textbf{8+ repositories}, reducing code redundancy \textbf{by 65\%}.}
-        \resumeItem{Enhanced \textbf{Splunk logging} by building searchable dashboards and redesigning validation logic for \textbf{maintainability}.}
-        % \resumeItem{Created reusable Docker images deployed on \textbf{EKS} to standardize deployment pipelines across \textbf{12+ backend services}}
-        % \resumeItem{Led cross-team system migration to replace legacy RPM distribution infrastructure with DNF-based solution, eliminating single point of failure and improving package deployment success rate from \textbf{70\% to 98\%}}
-        \resumeItem{Led cross-team RPM migration via \textbf{Terraform} and \textbf{Jenkins}, improving system robustness and deployment success rate \textbf{by 28\%}.}
+        \resumeItem{Enhanced Go-based Kafka consumer handling \textbf{500K+} daily events, resolving schema error codes to reduce message failures.}
+        \resumeItem{Strengthened CI/CD infrastructure by integrating SonarQube across \textbf{8+ repositories}, reducing code redundancy \textbf{by 65\%}.}
+        \resumeItem{Integrated RPM hosting infrastructure with automated deployment via \textbf{Jenkins CI} to DNF server, increasing reliability by \textbf{28\%}.}
+        % \resumeItem{Upgraded deprecated Python runtimes for \textbf{12+ Lambda functions} and executed zero-downtime EKS releases via \textbf{k9s}.}
+        \resumeItem{Extended player-level \textbf{Splunk} logging controls to event streaming system by implementing Go and Redis filtering across admin tool and event consumer, ensuring user privacy compliance while optimizing log volume for 10+ games.}
       \resumeItemListEnd
 
       % \resumeProjectHeading
@@ -216,19 +254,19 @@
         \resumeProjectHeading
         {\textbf{Full Stack Web Developer} $|$ UofT Engineering Orientation Website}{Remote $|$ May 2024 -- Aug 2024}{}{}
       \resumeItemListStart
-        \resumeItem{Developed and deployed \textbf{React/Redux} web application serving \textbf{1,000+ engineering students} using SDLC best practices, building \textbf{Express REST API} with real-time leaderboard functionality and performance-tracking data visualizations.}
-        \resumeItem{Architected scalable backend infrastructure using \textbf{MongoDB} and optimized indexing to improve query performance \textbf{by 40\%}.}
-        \resumeItem{Implemented \textbf{Redis} caching for background subscription handling, enhancing system scalability \textbf{by 20\%}.}
-        \resumeItem{Integrated reliable payment flows via \textbf{Stripe API} and webhooks to process \textbf{\$150,000+} in signup transactions.}
+        \resumeItem{Built and deployed a full-stack \textbf{React/Redux} and \textbf{Express} app  serving \textbf{1,000+ students}, processing \textbf{\$150K+} via \textbf{Stripe}.}
+        \resumeItem{Optimized backend with \textbf{MongoDB} indexing for \textbf{40\%} faster queries and \textbf{Redis} caching for \textbf{20\% higher scalability}.}
+        % \resumeItem{Implemented \textbf{Redis} caching for background subscription handling, enhancing system scalability \textbf{by 20\%}.}
+        % \resumeItem{Integrated reliable payment flows via \textbf{Stripe API} and webhooks to process \textbf{\$150,000+} in signup transactions.}
       \resumeItemListEnd
       \resumeProjectHeading
         {\textbf{Compliance Intern} $|$ Fresenius Kabi USA}{Chicago, IL $|$ May 2024 -- Aug 2024}{}{}
       \resumeItemListStart
         \resumeItem{Designed monorepo architecture consolidating 7 repositories into single workflow, \textbf{improving data retrieval speed by 95\%}.}
         % \resumeItem{Integrated data sources into SmartSheet database to track quality agreements, improving data quality \& reliability \textbf{by 20\%}}
-        \resumeItem{Developed data visualization pipeline, in \textbf{SmartSheet} and \textbf{MS SharePoint} for quarterly reports, speeding up tracking \textbf{by 80\%}.}         
-        \resumeItem{Analyzed \textbf{100k+ datapoints across 12 years} to create database schema, track quality agreements, and extract insights that improved product launch forecasting \textbf{from 6 hours to seconds}.}
-        \resumeItem{Automated call-to-action response alerts, \textbf{eliminating 90\%} of manual tracking errors and enhancing operational stability.}
+        % \resumeItem{Developed data visualization pipeline, in \textbf{SmartSheet} and \textbf{MS SharePoint} for quarterly reports, speeding up tracking \textbf{by 80\%}.}         
+        \resumeItem{Analyzed \textbf{100k+ datapoints across 12 years} to design a database schema, cutting launch forecasting \textbf{from 6 hours to seconds}.}
+        % \resumeItem{Automated call-to-action response alerts, \textbf{eliminating 90\%} of manual tracking errors and enhancing operational stability.}
       \resumeItemListEnd
       \resumeSubHeadingListEnd
   
